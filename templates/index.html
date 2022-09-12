@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .username {
+            margin-top: 10px;
+        }
+        .password {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .box {
+            border: 1px solid black;
+            height: 200px;
+            width: 400px;
+
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Login</h2>
+        <p>SMK Cinta Kasih</p>
+        <form action="{{ url_for('login') }}" method="POST">
+            <div class="username">
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="Username">
+            </div>
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <button type="submit">Log in</button>
+        </form>
+        <div>
+            <a href="{{ url_for('register') }}">Register</a>
+        </div>
+    </div>
+</body>
+</html>
